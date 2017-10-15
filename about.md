@@ -3,11 +3,13 @@ layout: page
 title: About
 sidebar_link: true
 ---
-
+#H1 
+About Me Bit
 <p class="message">
-  Hey there! This page is included as an example. Feel free to customize it
-  for your own use upon downloading. Carry on!
+ Cloud Security Architect for Cloudworks with experience more than 10 years in security. She spends all her time working closely with developers and architects to make security built in from design level. She is a big supporter of making security as culture and shifting security to the left. Viktorija believes that empowering developers and architects in security tasks by helping with education will increase security level without increasing additional workload.
+
+During free time she deep dives into Azure security, development, identity and access management.
+
+For direct contact: texnokot@gmail.com
 </p>
 
-To make pages show up in the sidebar, add `sidebar_link: true` to the front
-matter.
