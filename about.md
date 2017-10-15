@@ -3,7 +3,7 @@ layout: page
 title: About
 sidebar_link: true
 ---
-![placeholder](https://github.com/texnokot/texnokot.github.io/blob/master/_images/viktorija-almazova-bw.jpg "image")
+![placeholder](https://publicbw.blob.core.windows.net/photosbw/viktorija-almazova-bw.jpg "image")
 
 
 <p class="message">
