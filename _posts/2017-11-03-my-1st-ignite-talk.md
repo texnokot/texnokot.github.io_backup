@@ -10,7 +10,7 @@ The first challenge was - what can I say about security in five minutes? And how
 When slides were ready I took paper and wrote all that I wanted to say. I read that human can say around 35 words during 15 seconds. And it turned to be not a truth. At least in my case. Of course, if I didn't want to sound speedy. This was the second challenge. How to separate the wheat from the chaff. Main points. The exact and short message, which also is connected to the story. One sentence. You start to cut all details and leave the only main idea. It took some time. And then came the third challenge. Like I wrote slides are switching automatically and you need deal with it. You don't have an opportunity to stop the slide and say all. You just need to be good in timing. Solution? As always. Practice, practice, and practice. After first 3 times, i was desperate. I couldn't manage to get in time. But you also need to concentrate on voice and movements. But again with practice, you can fix all. 10 times helped. 
 And I thought I'm ready.
 So basically this is a talk itself:
-<iframe width="420" height="315" src="https://youtu.be/uGEnG3wZqn4?t=9962" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="420" src="http://www.youtube.com/embed/uGEnG3wZqn4?t=9962"></iframe>
 
 Am I happy with that? Almost, because I forgot about stress level, which comes every time no matter how often you are on stage. And I still need to learn how to become calmer. Probably meditation could help. And some points for myself:
 * voice - mainly because of stress
