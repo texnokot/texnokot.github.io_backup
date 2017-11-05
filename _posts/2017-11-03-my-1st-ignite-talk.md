@@ -11,7 +11,7 @@ When slides were ready I took paper and wrote all that I wanted to say. I read t
 And I thought I'm ready.
 So basically this is a talk itself:
 
-[https://publicbw.blob.core.windows.net/photosbw/youtube-devops.png](https://youtu.be/uGEnG3wZqn4?t=9963m)
+![placeholder]([https://publicbw.blob.core.windows.net/photosbw/youtube-devops.png])(https://youtu.be/uGEnG3wZqn4?t=9963m)
 
 Am I happy with that? Almost, because I forgot about stress level, which comes every time no matter how often you are on stage. And I still need to learn how to become calmer. Probably meditation could help. And some points for myself:
 * voice - mainly because of stress
