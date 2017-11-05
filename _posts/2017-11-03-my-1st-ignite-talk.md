@@ -1,10 +1,4 @@
 
----
-layout: post
-title:  "My 1st Ignite talk"
-date:   2017-11-03 18:20:01 -0600
-categories: talks
----
 
 This year I did a bit of public speaking. Most of the talks were in a format of 30 minutes or more. Over time you get used how to talk, behave and etc. The reason is simple - you control stage, slides and have plenty time. Then one of [DevOpsDays Oslo 2017](https://www.devopsdays.org/events/2017-oslo/) organizers proposed me to speak about security in Ignite talk format, I took that challenge. C'mon it will be fun and just 5 minutes. How hard can it be? However, Devil is in the details. Basically, Ignite is a series of speedy presentations, where the speaker has 20 slides for 5 minutes and they automatically switches every 15 seconds. More about Ignite, including best talks, can be found [here](http://www.ignitetalks.io/).  
 Recently I read one of the best books about public speaking [TED Talks](https://www.amazon.com/TED-Talks-Official-Public-Speaking/dp/0544634497) to improve myself as a speaker. There was mentioned that the shorter talk is the more time and effort it takes to prepare. Every word is true. I felt it on my skin.
