@@ -1,5 +1,4 @@
 
-
 ---
 layout: post
 title:  "My 1st Ignite talk"
