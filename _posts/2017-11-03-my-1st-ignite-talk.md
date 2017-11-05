@@ -13,7 +13,7 @@ So basically this is a talk itself:
 
 [<img src="https://publicbw.blob.core.windows.net/photosbw/youtube-devops.png" width="500">](https://youtu.be/uGEnG3wZqn4?t=9963)
 
-Slides can be found [here](texnokot.github.io/_files/devopsDays2017_Oslo01022017_Viktorija_Almazova.pdf)
+Slides can be found [here](../_files/devopsDays2017_Oslo01022017_Viktorija_Almazova.pdf)
 
 Am I happy with that? Almost, because I forgot about stress level, which comes every time no matter how often you are on stage. And I still need to learn how to become calmer. Probably meditation could help. And some points for myself:
 * voice - mainly because of stress
