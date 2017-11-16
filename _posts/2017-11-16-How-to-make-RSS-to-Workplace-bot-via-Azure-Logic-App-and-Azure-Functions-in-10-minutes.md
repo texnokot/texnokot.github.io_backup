@@ -14,13 +14,13 @@ NOTE: To be able to create and manage access tokens for apps you should be *Syst
 
 
 Make custom integration:
-![Create app](https://publicbw.blob.core.windows.net/articlerss/workplace_app_0.png | width=100)
+![Create app](https://publicbw.blob.core.windows.net/articlerss/workplace_app_0.png)
 
 Give proper rights to an app:
-![Rights app](https://publicbw.blob.core.windows.net/articlerss/workplace_app_1.png | width=100)
+![Rights app](https://publicbw.blob.core.windows.net/articlerss/workplace_app_1.png)
 
 Select to which group notifications should go:
-![Group app](https://publicbw.blob.core.windows.net/articlerss/workplace_app_2.png | width=100)
+![Group app](https://publicbw.blob.core.windows.net/articlerss/workplace_app_2.png)
 
 Remember Group ID and Access Token for an application. These will be used in Azure Function.
 
