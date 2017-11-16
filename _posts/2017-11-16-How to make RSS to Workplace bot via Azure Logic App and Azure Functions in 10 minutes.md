@@ -7,6 +7,7 @@ Let's make simple notification bot, which sends notifications from Azure health 
 * Azure Function: will get RSS feed title and summary and will create formatted post in dedicated group 
 * Facebook Workplace in two words is Facebook for company usage. More information [here](https://www.facebook.com/workplace)
 
+
 ## Facebook Workplace
 Let's start with Facebook Workplace. Choose or create a group, where notifications shall land. Next step is to make custom integration ([more](https://developers.facebook.com/docs/workplace/integrations/custom-integrations/apps)). 
 NOTE: To be able to create and manage access tokens for apps you should be *System Administrator*.
@@ -22,6 +23,7 @@ Select to which group notifications should go:
 ![Group app](https://publicbw.blob.core.windows.net/articlerss/workplace_app_2.png)
 
 Remember Group ID and Access Token for an application. These will be used in Azure Function.
+
 
 ## Azure Function
 Next step is to make a function, which will get RSS title and summary from Logic App. The code is written in JavaScript. We will use a generic webhook for this and give a name:
@@ -59,6 +61,7 @@ module.exports = function (context, data) {
 }
 ```
 
+
 ## Logic App
 
 Next step is to create Logic App:
@@ -76,9 +79,11 @@ So the result should look like:
 Now everything is done! When Azure health status publishes some changes App Logic will trigger Azure function and post on Facebook Workplace will be created.
 ![Workplace feed](https://publicbw.blob.core.windows.net/articlerss/workplace_result.png)
 
+
 ## Summary
 * Now we have bot publishing Azure Health status into Facebook Workplace
 * The creation of bot took less time than writing this post
+
 
 ## Bonus track
 If you want to have Azure Health notifications into Slack, just integrate it by going into Slack - taking Apps and choose RSS.
