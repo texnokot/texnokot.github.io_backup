@@ -1,4 +1,4 @@
-# How to make RSS to Workplace bot via Azure Logic App and Azure Functions in 10 minutes
+
 
 ## Introduction
 Let's make simple notification bot, which sends notifications from Azure health page to Facebook Workplace group by getting RSS feeds. Components are used:
