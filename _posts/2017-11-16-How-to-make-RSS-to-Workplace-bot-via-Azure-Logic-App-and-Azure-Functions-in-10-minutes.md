@@ -61,6 +61,8 @@ module.exports = function (context, data) {
 }
 ```
 
+Token and Group ID shall be added as environmental variables in Azure Functions Applications settings.
+
 
 ## Logic App
 
