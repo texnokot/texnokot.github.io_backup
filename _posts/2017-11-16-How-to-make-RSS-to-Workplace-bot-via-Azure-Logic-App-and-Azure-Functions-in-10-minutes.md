@@ -14,13 +14,17 @@ NOTE: To be able to create and manage access tokens for apps you should be *Syst
 
 
 Make custom integration:
+
 ![Create app](https://publicbw.blob.core.windows.net/articlerss/workplace_app_0.png)
 
 Give proper rights to an app:
+
 ![Rights app](https://publicbw.blob.core.windows.net/articlerss/workplace_app_1.png)
 
 Select to which group notifications should go:
+
 ![Group app](https://publicbw.blob.core.windows.net/articlerss/workplace_app_2.png)
+
 
 Remember Group ID and Access Token for an application. These will be used in Azure Function.
 
@@ -67,18 +71,23 @@ Token and Group ID shall be added as environmental variables in Azure Functions 
 ## Logic App
 
 Next step is to create Logic App:
+
 ![Azure Logic App](https://publicbw.blob.core.windows.net/articlerss/Create_logic_app.png)
 
 After Logic App is created, choose Blank Logic App. Take action RSS and configure RSS feed address and interval:
+
 ![Azure Logic App feed](feed_publishing)
 
 Add connector and choose Azure Functions, select your function. Your function is a web hook and will expect a JSON payload with two fields as an input.  Be sure that payload is exactly same as shown:
+
 ![Azure Logic App feed](https://publicbw.blob.core.windows.net/articlerss/feed_config.png)
 
 So the result should look like:
+
 ![Azure Logic App feed](https://publicbw.blob.core.windows.net/articlerss/feed_result.png)
 
 Now everything is done! When Azure health status publishes some changes App Logic will trigger Azure function and post on Facebook Workplace will be created.
+
 ![Workplace feed](https://publicbw.blob.core.windows.net/articlerss/workplace_result.png)
 
 
