@@ -76,7 +76,7 @@ Next step is to create Logic App:
 
 After Logic App is created, choose Blank Logic App. Take action RSS and configure RSS feed address and interval:
 
-![Azure Logic App feed](feed_publishing)
+![Azure Logic App feed](https://publicbw.blob.core.windows.net/articlerss/feed_publishing.png)
 
 Add connector and choose Azure Functions, select your function. Your function is a web hook and will expect a JSON payload with two fields as an input.  Be sure that payload is exactly same as shown:
 
