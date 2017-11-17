@@ -1,39 +1,22 @@
-theme: jekyll-theme-minimal
+# ----------- CONFIGURABLE START -----------
+title:            "Cloudy"
+description:      "All about clouds, security and identity from victoria"
+url:              force.sh # Site url, without a slash at the end.
+signoff:          "victoria" # Your name
+facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
+google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
+share:            false # Turn on twitter and facebook share buttons
 
-# Dependencies
-markdown:         kramdown
-highlighter:      rouge
+links:
+  - name:         Posts
+    url:          /
+    external:     false
+  - name:         About me
+    url:          /about
+    external:     false
+# ------------ CONFIGURABLE END ------------
 
-# Setup
-title:            Cloudy
-tagline:          ''
-description:      ''
-url:              https://texnokot.github.io/
-baseurl:          # the optional subpath of your site, e.g. "/blog"
-                  # NB: This applies to all pages in your Jekyll site.
-                  # If you want to move just the blog index pages but keep
-                  # other pages at root, see the paginate_path and
-                  # sidebar_blog_link below.
-
-author:
-  name:           'Andrew Fong'
-  url:            https://twitter.com/fongandrewc
-
-paginate:         5
-# paginate_path:    '/page:num'
-                    # Or '/blog/page:num' if you want to move your index pages
-
-plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-
-# Custom vars
-version:            3.4.1
-sidebar_home_link:  true
-comments: false
-# sidebar_blog_link:  '/blog'   # By default, your home page is your blog
-                                # page. If you change your paginate_path,
-                                # set this to the root of the paginate_path
-                                # to enable a separate blog link.
-
+permalink:        /posts/:title
+defaults:
+  - values:
+      layout: "default"

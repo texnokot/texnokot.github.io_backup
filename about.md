@@ -1,9 +1,8 @@
 ---
-layout: page
-title: About
-sidebar_link: true
+title: About me
 ---
-![placeholder](https://publicbw.blob.core.windows.net/photosbw/viktorija-almazova-bw.jpg "image")
+
+![avatar](https://publicbw.blob.core.windows.net/photosbw/viktorija-almazova-bw.jpg)
 
 
 <p class="message">
