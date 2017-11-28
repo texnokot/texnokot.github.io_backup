@@ -11,7 +11,7 @@ When slides were ready I took paper and wrote all what I wanted to say. I read t
 And I thought I'm ready.
 So basically this is a talk itself:
 
-[<img src="https://publicbw.blob.core.windows.net/photosbw/youtube-devops.png" width="500">](https://youtu.be/uGEnG3wZqn4?t=9963)
+[<img src="https://publicbw.blob.core.windows.net/photosbw/youtube-devops.png" width="500">](https://www.youtube.com/watch?v=LjJMtpY_IxQ)
 
 Slides can be found [here](https://github.com/texnokot/materials/blob/master/devopsDays2017_Oslo01022017_Viktorija_Almazova.pdf)
 
