@@ -1,0 +1,98 @@
+I"s#<h2 id="introduction">Introduction</h2>
+<p>Let’s make simple notification bot, which sends notifications from Azure health page to Facebook Workplace group by getting RSS feeds. Components are used:</p>
+<ul>
+  <li>RSS from <a href="https://azure.microsoft.com/en-us/status/">Azure Health page</a></li>
+  <li>Azure Logic App: will listen for a new RSS feed and trigger Azure Function</li>
+  <li>Azure Function: will get RSS feed title and summary and will create formatted post in dedicated group</li>
+  <li>Facebook Workplace in two words is Facebook for company usage. More information <a href="https://www.facebook.com/workplace">here</a></li>
+</ul>
+
+<h2 id="facebook-workplace">Facebook Workplace</h2>
+<p>Let’s start with Facebook Workplace. Choose or create a group, where notifications shall land. Next step is to make custom integration (<a href="https://developers.facebook.com/docs/workplace/integrations/custom-integrations/apps">more</a>). 
+NOTE: To be able to create and manage access tokens for apps you should be <em>System Administrator</em>.</p>
+
+<p>Make custom integration:</p>
+
+<p><img src="https://publicbw.blob.core.windows.net/articlerss/workplace_app_0.png" alt="Create app" /></p>
+
+<p>Give proper rights to an app:</p>
+
+<p><img src="https://publicbw.blob.core.windows.net/articlerss/workplace_app_1.png" alt="Rights app" /></p>
+
+<p>Select to which group notifications should go:</p>
+
+<p><img src="https://publicbw.blob.core.windows.net/articlerss/workplace_app_2.png" alt="Group app" /></p>
+
+<p>Remember Group ID and Access Token for an application. These will be used in Azure Function.</p>
+
+<h2 id="azure-function">Azure Function</h2>
+<p>Next step is to make a function, which will get RSS title and summary from Logic App. The code is written in JavaScript. We will use a generic webhook for this and give a name:
+<img src="https://publicbw.blob.core.windows.net/articlerss/Azure_function_create.png" alt="Azure function" /></p>
+
+<p>Create a function:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">context</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Webhook was triggered!</span><span class="dl">'</span><span class="p">);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Feed title = </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">data</span><span class="p">[</span><span class="dl">'</span><span class="s1">title</span><span class="dl">'</span><span class="p">]);</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Feed summary = </span><span class="dl">'</span><span class="o">+</span> <span class="nx">data</span><span class="p">[</span><span class="dl">'</span><span class="s1">summary</span><span class="dl">'</span><span class="p">]</span> <span class="p">)</span>
+    <span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">request</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">graphapi</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">defaults</span><span class="p">({</span> 
+        <span class="na">baseUrl</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://graph.facebook.com</span><span class="dl">'</span><span class="p">,</span>
+        <span class="na">auth</span><span class="p">:</span> <span class="p">{</span>
+                <span class="dl">'</span><span class="s1">bearer</span><span class="dl">'</span><span class="p">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">ACCESS_TOKEN</span>
+            <span class="p">}</span>
+    <span class="p">});</span>
+    <span class="nx">graphapi</span><span class="p">({</span>
+                <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span>
+                <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">/</span><span class="dl">'</span><span class="o">+</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">TARGET_GROUP</span> <span class="o">+</span><span class="dl">'</span><span class="s1">/feed</span><span class="dl">'</span><span class="p">,</span>
+                <span class="na">qs</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="na">formatting</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">MARKDOWN</span><span class="dl">'</span><span class="p">,</span>
+                    <span class="dl">'</span><span class="s1">message</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1"># </span><span class="dl">'</span><span class="o">+</span><span class="nx">data</span><span class="p">[</span><span class="dl">'</span><span class="s1">title</span><span class="dl">'</span><span class="p">]</span><span class="o">+</span><span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="o">+</span><span class="nx">data</span><span class="p">[</span><span class="dl">'</span><span class="s1">summary</span><span class="dl">'</span><span class="p">]</span>
+                <span class="p">}</span>
+            <span class="p">},</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">response</span><span class="p">,</span> <span class="nx">feed</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">context</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="nx">context</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">());</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+    <span class="nx">context</span><span class="p">.</span><span class="nx">done</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Token and Group ID shall be added as environmental variables in Azure Functions Applications settings.</p>
+
+<h2 id="logic-app">Logic App</h2>
+
+<p>Next step is to create Logic App:</p>
+
+<p><img src="https://publicbw.blob.core.windows.net/articlerss/Create_logic_app.png" alt="Azure Logic App" /></p>
+
+<p>After Logic App is created, choose Blank Logic App. Take action RSS and configure RSS feed address and interval:</p>
+
+<p><img src="https://publicbw.blob.core.windows.net/articlerss/feed_publishing.png" alt="Azure Logic App feed" /></p>
+
+<p>Add connector and choose Azure Functions, select your function. Your function is a web hook and will expect a JSON payload with two fields as an input.  Be sure that payload is exactly same as shown:</p>
+
+<p><img src="https://publicbw.blob.core.windows.net/articlerss/feed_config.png" alt="Azure Logic App feed" /></p>
+
+<p>So the result should look like:</p>
+
+<p><img src="https://publicbw.blob.core.windows.net/articlerss/feed_result.png" alt="Azure Logic App feed" /></p>
+
+<p>Now everything is done! When Azure health status publishes some changes App Logic will trigger Azure function and post on Facebook Workplace will be created.</p>
+
+<p><img src="https://publicbw.blob.core.windows.net/articlerss/workplace_result.png" alt="Workplace feed" /></p>
+
+<h2 id="summary">Summary</h2>
+<ul>
+  <li>Now we have bot publishing Azure Health status into Facebook Workplace</li>
+  <li>The creation of bot took less time than writing this post</li>
+</ul>
+
+<h2 id="bonus-track">Bonus track</h2>
+<p>If you want to have Azure Health notifications into Slack, just integrate it by going into Slack - taking Apps and choose RSS.
+Done:
+<img src="https://publicbw.blob.core.windows.net/articlerss/slack.png" alt="Slack" /></p>
+
+:ET
