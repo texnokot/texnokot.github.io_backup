@@ -1,23 +1,23 @@
 ---
-permalink: /404.html
-layout: null
+permalink: /404
+layout: default
 ---
 
-<html>
-  <head>
-    <meta content='Scribble' property='og:title' />
-    <title>Scribble</title>
-    <link href='{{ site.url }}/images/fav.png' rel='shortcut icon'>
-    <link rel="stylesheet" href="{{ site.url }}/stylesheets/style.css"/>
-    <meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
-    <meta content='text/html; charset=utf-8' http-equiv='content-type' />
-    <meta content='{{ site.url }}' property='og:url' />
-    <meta content="{{ site.description }}" property='og:description' />
-    <meta content="blog" property="og:type" />
-  </head>
-  <body class="lh-copy dark-gray ph3 pv5 f6 sans-serif tc bg-super-white">
-      <img src="{{ site.url }}/images/404.png" alt="not found" width="160" class="mb3" /><br>
-      <a href="{{ site.url }}" class="link blue hover-gray">Home</a>
+{% include header.html %}
+
+
+<div class="container text-center">
+  <div class="columns">
+    <div class="column col-6 col-mx-auto col-sm-12 negative-m-xs">
+      <div class="card">
+        <div class="card-body">
+            <h1 class="text-bold">404</h1>
+            <p><strong>Page not found :(</strong></p>
+            <p>The requested page could not be found.</p>
+        </div>
+      </div>
     </div>
-  </body>
-</html>
+  </div>
+
+  
+</div>
