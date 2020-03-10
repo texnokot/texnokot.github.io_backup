@@ -1,0 +1,9 @@
+---
+layout: category
+category: articles
+title: Articles
+---
+
+{% for post in site.categories.articles %}
+  {% include article-card.html %}
+{% endfor %}

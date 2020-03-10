@@ -1,9 +1,11 @@
 #This file defines all the categories you 
+
+
 articles:
   name: Articles
   description: Blog posts, articles
 tips-and-tricks:
-  name: Tips & Tricks
+  name: Tips and Tricks
   description: Not big enough for the article
 who-am-i:
   name: Who am I
