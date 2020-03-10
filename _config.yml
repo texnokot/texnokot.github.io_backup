@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Force.sh - Security simple
+title: force.sh - Security simple
 description: Personal blog about security in a friendly style
 # baseurl: / # the subpath of your site, e.g. /support
 url: force.sh # the base hostname AND PROTOCOL for your site, e.g. http://example.com
