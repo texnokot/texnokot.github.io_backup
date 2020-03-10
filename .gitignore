@@ -47,3 +47,9 @@ Gemfile.lock
 _config.dev.yml
 .vscode
 *.gem
+
+# Jekyll stuff
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
