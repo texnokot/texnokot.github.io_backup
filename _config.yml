@@ -28,7 +28,7 @@ content_type: Personal blog #Define whether this is a knowledge base, help cente
 use_authors: true #Set this to false to disable showing post authors
 
 brand_logo: logo.png
-brand_name: https://force.sh
+brand_name: force.sh
 header: May the security be with you
 
 # Social Links
