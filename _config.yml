@@ -21,7 +21,7 @@
 title: force.sh - Security simple
 description: Personal blog about security in a friendly style
 # baseurl: / # the subpath of your site, e.g. /support
-url: force.sh # the base hostname AND PROTOCOL for your site, e.g. http://example.com
+url: https://force.sh # the base hostname AND PROTOCOL for your site, e.g. http://example.com
 permalink: /:categories/:title
 
 content_type: Personal blog #Define whether this is a knowledge base, help center, or something else
@@ -51,7 +51,7 @@ nav_item_three: #
 nav_item_three_link: #
 
 nav_button: Home
-nav_button_link: http://force.sh
+nav_button_link: https://force.sh
 
 # Build settings
 theme: minima
