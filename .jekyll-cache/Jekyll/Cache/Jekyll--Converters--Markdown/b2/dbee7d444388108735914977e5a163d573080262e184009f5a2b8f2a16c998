@@ -1,9 +1,0 @@
-I"Ž<h2 id="introduction">Introduction</h2>
-<p>Letâ€™s make simple notification bot, which sends notifications from Azure health page to Facebook Workplace group by getting RSS feeds. Components are used:</p>
-<ul>
-  <li>RSS from <a href="https://azure.microsoft.com/en-us/status/">Azure Health page</a></li>
-  <li>Azure Logic App: will listen for a new RSS feed and trigger Azure Function</li>
-  <li>Azure Function: will get RSS feed title and summary and will create formatted post in dedicated group</li>
-  <li>Facebook Workplace in two words is Facebook for company usage. More information <a href="https://www.facebook.com/workplace">here</a></li>
-</ul>
-:ET
