@@ -4,6 +4,7 @@ title: "My 1st Ignite talk"
 date: 2017-11-03 08:44:38 -0400
 category: articles
 author: vic
+short-description: 1st Ignite talk experience.
 ---
 
 -----
