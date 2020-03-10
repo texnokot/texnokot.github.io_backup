@@ -75,3 +75,5 @@ sass:
 
 # skip future date thing
 future: true
+
+categories: [articles, tips-and-tricks, who-am-i]

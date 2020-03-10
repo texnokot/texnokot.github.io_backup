@@ -2,9 +2,9 @@
 articles:
   name: Articles
   description: Blog posts, articles
-who-am-i:
-  name: Who am I
-  description: If it matters
 tips-and-tricks:
   name: Tips & Tricks
   description: Not big enough for the article
+who-am-i:
+  name: Who am I
+  description: If it matters
