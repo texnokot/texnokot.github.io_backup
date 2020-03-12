@@ -24,7 +24,7 @@ description: Personal blog about security in a friendly style
 url: https://force.sh # the base hostname AND PROTOCOL for your site, e.g. http://example.com
 permalink: /:categories/:title
 
-content_type: Personal blog #Define whether this is a knowledge base, help center, or something else
+content_type: Lofty Thoughts #Define whether this is a knowledge base, help center, or something else
 use_authors: true #Set this to false to disable showing post authors
 
 brand_logo: logo.png
